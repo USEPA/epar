@@ -35,14 +35,44 @@ knitr::opts_chunk$set(purl = NOT_CRAN,
 #Sys.setenv(mapzen_key=key)
 ```
 
+# TL;DR
+
+If you have a GitHub and local git repository that is not on OneDrive (e.g. git repos and OneDrive are best to not be mixed!), we can set up a mirror on OneDrive that will satisfy records requirements because EPA does not consider GitHub repos as records.  Our files on OneDrive are records and are backed up.  
+
+If you are working in R in the git repository (aside: An RStudio project would be an excellent way to manage this) you can do the following to set up a mirror repo on OneDrive.
+
+First, make sure you have the `epar` pacakge installed from GitHub.
+
+```{r eval=FALSE}
+remotes::install_github("usepa/epar")
+library(epar)
+```
+
+With that taken care of we can use the `add_mirror_repo()` and `one_drive_mirror()` functions to get everything set up.
+
+```{r eval=FALSE}
+mirror <- one_drive_mirror("projects")
+add_mirror_repo(mirror)
+```
+
+For details read the rest!
+
 # Records and GitHub Repos
 
 Stuff
 
 # Options for Records
 
+Stuff
+
 # Git and OneDrive
+
+Stuff
 
 # Git Workflow
 
+Stuff
+
 # Solution
+
+Stuff

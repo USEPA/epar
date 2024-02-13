@@ -1498,21 +1498,46 @@ border-radius: 0px;
 </div>
 
 
+<div id="tldr" class="section level1">
+<h1>TL;DR</h1>
+<p>If you have a GitHub and local git repository that is not on OneDrive
+(e.g. git repos and OneDrive are best to not be mixed!), we can set up a
+mirror on OneDrive that will satisfy records requirements because EPA
+does not consider GitHub repos as records. Our files on OneDrive are
+records and are backed up.</p>
+<p>If you are working in R in the git repository (aside: An RStudio
+project would be an excellent way to manage this) you can do the
+following to set up a mirror repo on OneDrive.</p>
+<p>First, make sure you have the <code>epar</code> pacakge installed
+from GitHub.</p>
+<pre class="r"><code>remotes::install_github(&quot;usepa/epar&quot;)
+library(epar)</code></pre>
+<p>With that taken care of we can use the <code>add_mirror_repo()</code>
+and <code>one_drive_mirror()</code> functions to get everything set
+up.</p>
+<pre class="r"><code>mirror &lt;- one_drive_mirror(&quot;projects&quot;)
+add_mirror_repo(mirror)</code></pre>
+<p>For details read the rest!</p>
+</div>
 <div id="records-and-github-repos" class="section level1">
 <h1>Records and GitHub Repos</h1>
 <p>Stuff</p>
 </div>
 <div id="options-for-records" class="section level1">
 <h1>Options for Records</h1>
+<p>Stuff</p>
 </div>
 <div id="git-and-onedrive" class="section level1">
 <h1>Git and OneDrive</h1>
+<p>Stuff</p>
 </div>
 <div id="git-workflow" class="section level1">
 <h1>Git Workflow</h1>
+<p>Stuff</p>
 </div>
 <div id="solution" class="section level1">
 <h1>Solution</h1>
+<p>Stuff</p>
 </div>
 
 

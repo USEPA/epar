@@ -15,3 +15,11 @@ knitr::opts_chunk$set(purl = NOT_CRAN,
 #key <- readRDS("../tests/testthat/key_file.rds")
 #Sys.setenv(mapzen_key=key)
 
+## ----eval=FALSE---------------------------------------------------------------
+#  remotes::install_github("usepa/epar")
+#  library(epar)
+
+## ----eval=FALSE---------------------------------------------------------------
+#  mirror <- one_drive_mirror("projects")
+#  add_mirror_repo(mirror)
+
