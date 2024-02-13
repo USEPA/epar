@@ -14,10 +14,11 @@
 #' @param current_repo The repo you wish to mirror.  Default is to use the current
 #'                     folder.  It must be a git repository.
 #' @export
-#' @examples 
-#' mirror <- normalizePath("C:\\Users\\JHollist\\OneDrive - Environmental Protection Agency (EPA)\\projects\\miscPackage", mustWork = FALSE)
+#' @examples
+#' library(epar)
+#' mirror <- one_drive_mirror("projects")
 #' add_mirror_repo(mirror)                     
-add_mirror_repo <- function(mirror_repo = one_drive_mirror(), 
+add_mirror_repo <- function(mirror_repo, 
                             current_repo = ".", overwrite = FALSE){
   
   if(!grepl("https://", mirror_repo)){
@@ -57,6 +58,7 @@ add_mirror_repo <- function(mirror_repo = one_drive_mirror(),
            ignore.stdout = TRUE, 
            ignore.stderr = TRUE)
   }
+  invisible(mirror_repo)
 }
 
 #' Set up path for a OneDrive remote
