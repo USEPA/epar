@@ -13,11 +13,18 @@
 #'                    extension
 #' @param current_repo The repo you wish to mirror.  Default is to use the current
 #'                     folder.  It must be a git repository.
+#' @param overwrite Logical to determine if existing mirror repository should be 
+#'                  removed and replaced with the current local repo.  Default is
+#'                  FALSE.  TRUE will delete the exisiting mirrored repo but wont make any
+#'                  changes to the local repo.
+#'                     
 #' @export
 #' @examples
+#' \dontrun{
 #' library(epar)
 #' mirror <- one_drive_mirror("projects")
-#' add_mirror_repo(mirror)                     
+#' add_mirror_repo(mirror) 
+#' }                    
 add_mirror_repo <- function(mirror_repo, 
                             current_repo = ".", overwrite = FALSE){
   
@@ -67,6 +74,11 @@ add_mirror_repo <- function(mirror_repo,
 #' location is the root of the users one drive and the name of the mirror defaults
 #' to the name of current repository.  
 #' 
+#' @param repo_path Path on OneDrive to store your mirrored repository.  Defaults
+#'                  to the root of your OneDrive.
+#' 
+#' @param repo_name Name of the mirrored repo.  Defaults to the name of the current
+#'                  git repo.  Should maintain default in most cases.
 #' @export
 one_drive_mirror <- function(repo_path = "", repo_name = basename(getwd())){
   od_path <- normalizePath("~")
@@ -79,6 +91,10 @@ one_drive_mirror <- function(repo_path = "", repo_name = basename(getwd())){
 }
 
 #' Is this a git repo
+#' 
+#' Function that returns TRUE or FALSE if the specified folder is a git repo or not.
+#' 
+#' @param repo Path to the folder to test if it is or is not a git repository.
 #' @export
 is_git <- function(repo = "."){
   gitty <- system(paste0("git -C ", repo, " rev-parse"), ignore.stdout = TRUE, 

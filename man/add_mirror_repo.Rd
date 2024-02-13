@@ -14,6 +14,11 @@ extension}
 
 \item{current_repo}{The repo you wish to mirror.  Default is to use the current
 folder.  It must be a git repository.}
+
+\item{overwrite}{Logical to determine if existing mirror repository should be 
+removed and replaced with the current local repo.  Default is
+FALSE.  TRUE will delete the exisiting mirrored repo but wont make any
+changes to the local repo.}
 }
 \description{
 This function looks at a current git repository, and sets up two push 
@@ -24,7 +29,9 @@ able to browse the files and folders in the mirror location.  A clone of this
 repo will however restore the files and folders at the time of the last push.
 }
 \examples{
+\dontrun{
 library(epar)
 mirror <- one_drive_mirror("projects")
-add_mirror_repo(mirror)                     
+add_mirror_repo(mirror) 
+}                    
 }

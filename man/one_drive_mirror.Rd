@@ -6,6 +6,13 @@
 \usage{
 one_drive_mirror(repo_path = "", repo_name = basename(getwd()))
 }
+\arguments{
+\item{repo_path}{Path on OneDrive to store your mirrored repository.  Defaults
+to the root of your OneDrive.}
+
+\item{repo_name}{Name of the mirrored repo.  Defaults to the name of the current
+git repo.  Should maintain default in most cases.}
+}
 \description{
 This function creates a path for the mirror on a users OneDrive.  Default 
 location is the root of the users one drive and the name of the mirror defaults

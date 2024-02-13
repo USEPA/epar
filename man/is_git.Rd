@@ -6,6 +6,9 @@
 \usage{
 is_git(repo = ".")
 }
+\arguments{
+\item{repo}{Path to the folder to test if it is or is not a git repository.}
+}
 \description{
-Is this a git repo
+Function that returns TRUE or FALSE if the specified folder is a git repo or not.
 }
