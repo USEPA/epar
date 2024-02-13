@@ -1,0 +1,24 @@
+Package: epar
+Title: EPA R Utilities
+Version: 0.0.0.9999
+Authors@R: c(person("Jeffrey", "Hollister", email = "hollister.jeff@epa.gov", 
+                  role = c("aut", "cre"), comment = c(ORCID = "0000-0002-9254-9740")))
+URL: https://github.com/usepa/epar
+BugReports: https://github.com/usepa/epar/issues/
+Maintainer: Jeffrey Hollister <hollister.jeff@epa.gov>
+Description: This package contains utility functions specific to the needs of 
+             EPA R Users.
+Depends: R (>= 3.5.0)
+Imports:
+    stringr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown,
+    formatR,
+    progress
+VignetteBuilder: knitr
