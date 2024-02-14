@@ -11,7 +11,8 @@ Description: This package contains utility functions specific to the needs of
 Depends: R (>= 3.5.0)
 Imports:
     stringr,
-    fs
+    fs,
+    here
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

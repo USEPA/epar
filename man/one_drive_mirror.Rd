@@ -4,7 +4,7 @@
 \alias{one_drive_mirror}
 \title{Set up path for a OneDrive remote}
 \usage{
-one_drive_mirror(repo_path = "", repo_name = basename(getwd()))
+one_drive_mirror(repo_path = "", repo_name = basename(here::here()))
 }
 \arguments{
 \item{repo_path}{Path on OneDrive to store your mirrored repository.  Defaults

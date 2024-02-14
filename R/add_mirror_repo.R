@@ -26,7 +26,7 @@
 #' add_mirror_repo(mirror) 
 #' }                    
 add_mirror_repo <- function(mirror_repo, 
-                            current_repo = ".", overwrite = FALSE){
+                            current_repo = here::here(), overwrite = FALSE){
   
   if(!grepl("https://", mirror_repo)){
     if(dir.exists(mirror_repo) & !overwrite){
@@ -80,7 +80,7 @@ add_mirror_repo <- function(mirror_repo,
 #' @param repo_name Name of the mirrored repo.  Defaults to the name of the current
 #'                  git repo.  Should maintain default in most cases.
 #' @export
-one_drive_mirror <- function(repo_path = "", repo_name = basename(getwd())){
+one_drive_mirror <- function(repo_path = "", repo_name = basename(here::here())){
   od_path <- normalizePath("~")
   od_path <- gsub("(Profile\\\\Documents)", "", od_path)
   if(nchar(repo_path)>0){

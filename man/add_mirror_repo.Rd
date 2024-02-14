@@ -4,7 +4,7 @@
 \alias{add_mirror_repo}
 \title{Sets up a secondary git remote to push to}
 \usage{
-add_mirror_repo(mirror_repo, current_repo = ".", overwrite = FALSE)
+add_mirror_repo(mirror_repo, current_repo = here::here(), overwrite = FALSE)
 }
 \arguments{
 \item{mirror_repo}{The repository that will serve as the mirror.  Maybe a 

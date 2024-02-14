@@ -16,10 +16,22 @@ knitr::opts_chunk$set(purl = NOT_CRAN,
 #Sys.setenv(mapzen_key=key)
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  remotes::install_github("usepa/epar")
+#  install.packages("pak")
+#  pak::pkg_install("usepa/epar")
 #  library(epar)
 
 ## ----eval=FALSE---------------------------------------------------------------
 #  mirror <- one_drive_mirror("projects")
 #  add_mirror_repo(mirror)
+
+## ----install_epar, eval=FALSE-------------------------------------------------
+#  pak::pkg_install("usepa/epar")
+#  library(epar)
+
+## ----mirror-------------------------------------------------------------------
+my_mirror <- one_drive_mirror("projects")
+my_mirror
+
+## ----add_mirror, eval=FALSE---------------------------------------------------
+#  add_mirror_repo(my_mirror)
 
