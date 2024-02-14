@@ -59,11 +59,7 @@ For details read the rest!
 
 # Records and GitHub Repos
 
-Stuff
-
-# Options for Records
-
-Stuff
+Files stored on GitHub do not meet the requirements for records, therefore we need to find alternative means to make sure our GitHub based work are captured in a records friendly way.
 
 # Git and OneDrive
 
