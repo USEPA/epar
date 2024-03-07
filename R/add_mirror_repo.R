@@ -31,7 +31,7 @@ add_mirror_repo <- function(mirror_repo,
   if(!grepl("https://", mirror_repo)){
     if(dir.exists(mirror_repo) & !overwrite){
       stop(paste("The mirror_repo,", 
-                 mirror_repo, "already exists and overwrite = FALSE.  Choose a new name."))
+                 mirror_repo, "already exists.  Switch overwrite = TRUE if you want to replace the existing one."))
     } else if(dir.exists(mirror_repo) & overwrite){
       fs::dir_delete(mirror_repo)
     }
