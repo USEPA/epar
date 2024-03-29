@@ -49,7 +49,11 @@ add_mirror_repo <- function(mirror_repo,
   current_remotes <- stringr::str_remove(current_remotes, "origin\t")
   current_remotes <- stringr::str_remove(current_remotes, "\\s\\([a-z]+\\)")
   if(length(current_remotes)==0){
-    stop("There are no current remotes set for this repo.  Please set a legit remote.")
+    message("There are no current remotes set for this repo.")
+    message(paste0("Setting ", mirror_repo, " as only remote."))
+    system(paste0('git remote add origin "', mirror_repo, '"'), 
+           ignore.stdout = TRUE, 
+           ignore.stderr = TRUE)
   }
   
   if(length(current_remotes) < 3){
