@@ -1,7 +1,7 @@
 #' Run package tests and create badge
 #' 
 #' This function uses the \code{covr} package to run tests for a package and 
-#' returns a markdown badge code reporting the code coverate that can be used on
+#' returns a markdown badge code reporting the code coverage that can be used on
 #' a README (or any markdown).
 #' 
 #' @param package path to package
