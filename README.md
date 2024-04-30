@@ -5,7 +5,14 @@
 
 <!-- badges: start -->
 
-![](https://img.shields.io/badge/test%20coverage-9.8%-8B0000.svg)
+Badges:
+
+``` r
+cat(epar::test_and_badge())
+```
+
+![](https://img.shields.io/badge/test%20coverage-9.8%25-8B0000.svg)
+
 <!-- badges: end -->
 
 The goal of epar is to …

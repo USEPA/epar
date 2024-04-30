@@ -14,7 +14,7 @@ test_and_badge <- function(package = "."){
   color_rmp <- gsub("#", "", color_rmp)
   indx <- ifelse(round(cov_perc/10) == 0, 1, round(cov_perc/10))
   my_color <- color_rmp[indx]
-  badge <- badger::badge_custom("test coverage", paste0(cov_perc, "%"), 
+  badge <- badger::badge_custom("test coverage", paste0(cov_perc, "%25"), 
                                 my_color)
   badge
 }

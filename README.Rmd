@@ -16,9 +16,12 @@ knitr::opts_chunk$set(
 # epar
 
 <!-- badges: start -->
-```{r coverage_badge, results='asis', echo=FALSE}
+Badges:
+
+```{r coverage_badge, results='asis', echo=TRUE}
 cat(epar::test_and_badge())
 ```
+
 <!-- badges: end -->
 
 The goal of epar is to ...
