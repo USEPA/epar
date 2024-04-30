@@ -20,8 +20,8 @@ jobs:
       
       - name: Install R packages
         run: |
-          Rscript -e "install.packages(c('devtools'))"
-          Rscript -e "devtools::install_github('usepa/epar', dependencies = TRUE)"
+          Rscript -e "install.packages(c('remotes'))"
+          Rscript -e "remotes::install_github('usepa/epar', dependencies = TRUE)"
 
       - name: Render Rmarkdown files and Commit Results
         run: |
