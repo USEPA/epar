@@ -12,7 +12,9 @@ Depends: R (>= 3.5.0)
 Imports:
     stringr,
     fs,
-    here
+    here,
+    covr,
+    badger
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
