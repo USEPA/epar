@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 Badges:
+
 ```{r coverage_badge, results='asis', echo=TRUE}
 cat(epar::test_and_badge())
 ```
