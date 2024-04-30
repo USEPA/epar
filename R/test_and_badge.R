@@ -10,7 +10,7 @@
 test_and_badge <- function(package = "."){
   pkg_cov <- covr::package_coverage(package)
   cov_perc <- round(covr::percent_coverage(pkg_cov), 1)
-  color_rmp <- colorRampPalette(c("red", "orange", "yellow","darkgreen"))(10)
+  color_rmp <- colorRampPalette(c("darkred", "yellow", "darkgreen"))(10)
   color_rmp <- gsub("#", "", color_rmp)
   indx <- ifelse(round(cov_perc/10) == 0, 1, round(cov_perc/10))
   my_color <- color_rmp[indx]
