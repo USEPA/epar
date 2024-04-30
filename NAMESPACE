@@ -3,3 +3,4 @@
 export(add_mirror_repo)
 export(is_git)
 export(one_drive_mirror)
+export(test_and_badge)

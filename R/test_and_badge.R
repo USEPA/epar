@@ -16,6 +16,6 @@ test_and_badge <- function(package = "."){
   my_color <- color_rmp[indx]
   badge <- badger::badge_custom("test coverage", paste0(cov_perc, "%"), 
                                 my_color)
-  cat(badge)
+  badge
 }
 
