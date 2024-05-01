@@ -1,8 +1,6 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
-on:
-  push:
-    paths: ['**.Rmd']
+on: push
 
 name: render-rmarkdown
 
@@ -23,11 +21,13 @@ jobs:
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_github('usepa/epar', dependencies = TRUE)"
 
-      - name: Render Rmarkdown files and Commit Results
+      - name: Render README files
         run: |
-          RMD_PATH=($(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '[.]Rmd$'))
-          Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) devtools::install(); rmarkdown::render(f)' ${RMD_PATH[*]}
+          Rscript -e "rmarkdown::render('REAMDE.Rmd')"
+          
+      - name: Commit files    
+        run:|
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git commit ${RMD_PATH[*]/.Rmd/.md} -m 'Re-build Rmarkdown files' || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+          git commit README.md -m 'Re-build README'
+          git push origin
