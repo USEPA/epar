@@ -23,7 +23,7 @@ jobs:
 
       - name: Render README files
         run: |
-          Rscript -e "rmarkdown::render('REAMDE.Rmd')"
+          Rscript -e "rmarkdown::render('README.Rmd')"
           
       - name: Commit files    
         run:|
