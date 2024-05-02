@@ -18,7 +18,7 @@ jobs:
       
       - name: Install R packages
         run: |
-          Rscript -e "install.packages(c('credentials', 'curl', 'httr2', 'httr', 'gh', 'gert', 'remotes', 'covr', 'badger', 'usethis', 'rmarkdown'))"
+          Rscript -e "install.packages(c('testthat', 'credentials', 'curl', 'httr2', 'httr', 'gh', 'gert', 'remotes', 'covr', 'badger', 'usethis', 'rmarkdown'))"
           Rscript -e "remotes::install_github('usepa/epar')"
 
       - name: Render README files
