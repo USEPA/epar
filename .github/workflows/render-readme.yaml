@@ -2,10 +2,10 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on: push
 
-name: render-rmarkdown
+name: render-readme
 
 jobs:
-  render-rmarkdown:
+  render-readme:
     runs-on: windows-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -18,8 +18,8 @@ jobs:
       
       - name: Install R packages
         run: |
-          Rscript -e "install.packages(c('testthat', 'credentials', 'curl', 'httr2', 'httr', 'gh', 'gert', 'remotes', 'covr', 'badger', 'usethis', 'rmarkdown'))"
-          Rscript -e "remotes::install_github('usepa/epar')"
+          Rscript -e "install.packages(c('rmarkdown'))"
+          Rscript -e "remotes::install_github('usepa/epar', dependencies = TRUE)"
 
       - name: Render README files
         run: |
