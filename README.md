@@ -11,7 +11,7 @@ Badges:
 cat(epar::test_and_badge())
 ```
 
-![](https://img.shields.io/badge/test%20coverage-9.8%25-8B0000.svg)
+![](https://img.shields.io/badge/test%20coverage-15.7%25-A43800.svg)
 
 <!-- badges: end -->
 
