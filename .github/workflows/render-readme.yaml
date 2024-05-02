@@ -18,8 +18,8 @@ jobs:
       
       - name: Install R packages
         run: |
-          Rscript -e "install.packages(c('remotes', 'covr', 'badger', 'usethis'))"
-          Rscript -e "remotes::install_github('usepa/epar', dependencies = TRUE)"
+          Rscript -e "install.packages(c('credentials', 'curl', 'httr2', 'httr', 'gh', 'gert', 'remotes', 'covr', 'badger', 'usethis')"
+          Rscript -e "remotes::install_github('usepa/epar')"
 
       - name: Render README files
         run: |
